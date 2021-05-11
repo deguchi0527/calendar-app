@@ -1,0 +1,12 @@
+header {
+  background-color: #ffffdd;
+  padding: 2vh;
+}
+
+header>h2 {
+  text-align: center;
+}
+
+header span {
+  padding-right: 1vh;
+}

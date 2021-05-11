@@ -1,8 +1,9 @@
+<%= render "shared/header" %>
+
 <p id="notice"><%= notice %></p>
 
-<h1>自分の日記</h1>
-
-<table>
+<h2 class="heading">ToDoリスト</h2>
+<table class="lists">
   <thead>
     <tr>
       <th>タイトル</th>
@@ -10,15 +11,14 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @memos.each do |memo| %>
       <tr>
         <td><%= memo.title %></td>
         <td><%= memo.start_time.strftime("%Y-%m-%d %H:%M") %></td>
-        <td><%= link_to 'Show', memo %></td>
-        <td><%= link_to 'Edit', edit_memo_path(memo.id) %></td>
-        <td><%= link_to 'Destroy',memo_path(memo.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '詳細', memo %></td>
+        <td><%= link_to '編集', edit_memo_path(memo.id) %></td>
+        <td><%= link_to '削除',memo_path(memo.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
