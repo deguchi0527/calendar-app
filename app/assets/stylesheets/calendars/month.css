@@ -1,0 +1,28 @@
+.simple-calendar {
+  width: 96%;
+  margin: 0 auto;
+}
+
+.calendar-heading {
+  padding-bottom: 3vh;
+}
+
+.calendar-heading a {
+  border: 2px solid #ffd700;
+  border-radius: 10%;
+  padding: 6px;
+  font-weight: bolder;
+  margin: 0 3vh;
+}
+
+.calendar-title {
+  font-size: 30px;
+}
+
+.month {
+  margin-left: 1vh;
+}
+
+.table-striped thead tr th {
+  text-align: center;
+}
