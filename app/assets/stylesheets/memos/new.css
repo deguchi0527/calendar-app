@@ -1,12 +1,11 @@
 .container-fluid {
   height: 100vh;
-  background-color: #ffffdd;
-  padding-top: 12vh;
 }
 
 .new-event {
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #ffffdd;
+  margin-top: 5vh;
 }
 
 .new-heading {
