@@ -13,15 +13,18 @@ a:hover {
   color: inherit;
 }
 
-/* /共通 */
+li {
+  list-style: none;
+}
 
+/* /共通 */
+.user-info {
+  padding: 3vh 5vh 2vh;
+}
 .new-memo {
   display: flex;
   align-items: center;
   padding: 3vh 5vh 2vh;
-}
-
-.heading {
 }
 
 .new-memo-btn {

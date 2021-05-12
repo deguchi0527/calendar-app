@@ -1,5 +1,15 @@
 <%= render "shared/header" %>
 
+<div class="user-info">
+  <% if user_signed_in? %>
+    <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
+    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+  <% else %>
+    <li><%= link_to 'ログイン',  new_user_session_path, class: "login" %></li>
+    <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+  <% end %>
+</div>
+
 <div class="new-memo">
   <h2 class="heading">ToDoリスト</h2>
   <%= link_to '作成', new_memo_path, class:"new-memo-btn" %>
@@ -41,10 +51,3 @@
   <% end %>
 <% end %>
 
-<% if user_signed_in? %>
-  <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
-  <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-<% else %>
-  <li><%= link_to 'ログイン',  new_user_session_path, class: "login" %></li>
-  <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-<% end %>
