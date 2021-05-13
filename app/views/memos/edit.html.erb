@@ -1,36 +1,46 @@
 <%= render "shared/header" %>
 
 <div class="container-fluid">
-  <div class="col-12 col-md-8 col-lg-6 new-event">
+  <div class="row">
+    <div class="col-12 col-md-8 col-lg-6 new-event">
 
-    <%= form_with model: @memo, local: true do |f| %>
-      <h2 class="new-heading">スケジュルーの登録</h2>
-      <div class="form title">
-        <%= f.label :title do %>
-          タイトル
-        <% end %>
-        <%= f.text_field :title %>
-      </div>
-
-      <div class="form time">
-        <%= f.label :start_time do %>
-          開始時間
-        <% end %>
-        <div class="select-box">
-          <%= f.datetime_select :start_time %>
+      <%= form_with model: @memo, local: true do |f| %>
+        <h2 class="new-heading">スケジュルーの登録</h2>
+        
+        <div class="form title">
+          <%= f.label :title do %>
+            タイトル
+          <% end %>
+          <%= f.text_field :title %>
         </div>
-      </div>
 
-      <div class="form content">
-        <%= f.label :content do %>
-          内容
-        <% end %>
-        <%= f.text_field :content %>
-      </div>
+        <div class="form time">
+          <%= f.label :start_time do %>
+            開始時間
+          <% end %>
+          <div class="select-box">
+            <%= f.datetime_select :start_time %>
+          </div>
+        </div>
 
-      <div class="form submit">
-        <%= f.submit %>
-      </div>
-    <% end %>
+        <div class="form content">
+          <%= f.label :content do %>
+            内容
+          <% end %>
+          <%= f.text_field :content %>
+        </div>
+
+        <div class="form image" id="image-list">
+            <label class="form-image">
+              <span class="image-file"><%= icon('far', 'image', class: "fa-3x") %></span>
+              <%= f.file_field :image, class: "hidden", id: "tweet-image" %>
+            </label>
+        </div>
+
+        <div class="form submit">
+          <%= f.submit %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
