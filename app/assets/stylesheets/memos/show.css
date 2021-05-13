@@ -1,0 +1,59 @@
+.show-event {
+  margin: 0 auto;
+  padding-top: 5vh;
+  height: 100%;
+  background-color: #fff;
+}
+
+.image-show {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+
+.show-contents>p {
+  padding-left: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.show-contents>p>strong {
+  padding-bottom: 0.5vh;
+}
+
+.show-btn {
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.show-btn>a {
+  background-color: #aaa;
+  border-radius: 10%;
+  display: block;
+  padding: 8px;
+  margin-top: 2vh;
+}
+
+.show-btn>a:last-child {
+  margin-left: 3vh;
+}
+
+/* タブレット表示 */
+@media (max-width: 768px){
+  .image-show {
+    width: 80%;
+  }
+}
+
+/* スマホ表示時 */
+@media (max-width: 576px) {
+  .image-show {
+    width: 80%;
+  }
+  .show-contents>p {
+    padding-left: 2vh;
+  }
+}

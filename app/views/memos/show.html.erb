@@ -1,19 +1,31 @@
-<p id="notice"><%= notice %></p>
+<%= render "shared/header" %>
 
-<p>
-  <strong>タイトル</strong>
-  <%= @memo.title %>
-</p>
-
-<p>
-  <strong>時間</strong>
-  <%= @memo.start_time.strftime("%Y-%m-%d %H:%M") %>
-</p>
-
-<p>
-  <strong>内容</strong>
-  <%= @memo.content %>
-</p>
-
-<%= link_to 'Edit', edit_memo_path(@memo) %> |
-<%= link_to 'home', root_path %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-md-8 show-event">
+      <% if @memo.image.present? %>
+        <div class="image-content">
+          <%= image_tag @memo.image, class: "image-show"%>
+        </div>
+      <% end %>
+      <div class="show-contents">
+        <p>
+          <strong>タイトル</strong>
+          <%= @memo.title %>
+        </p>
+        <p>
+          <strong>時間</strong>
+          <%= @memo.start_time.strftime("%Y-%m-%d %H:%M") %>
+        </p>
+        <p>
+          <strong>内容</strong>
+          <%= @memo.content %>
+        </p>
+      </div>
+      <div class="show-btn">
+        <%= link_to '編集', edit_memo_path(@memo) %>
+        <%= link_to '削除', memo_path(@memo), method: :delete %>
+      </div>
+    </div>
+  </div>
+</div>
