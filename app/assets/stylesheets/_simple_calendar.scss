@@ -1,25 +1,33 @@
 .simple-calendar {
-  .simple-calendar {
-    .day {}
+  .day {
+    background-color: #fff;
+  }
   
-    .wday-0 {}
-    .wday-1 {}
-    .wday-2 {}
-    .wday-3 {}
-    .wday-4 {}
-    .wday-5 {}
-    .wday-6 {}
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .past {}
+  .future {}
   
-    .today {}
-    .past {}
-    .future {}
+  .start-date {}
   
-    .start-date {}
-  
-    .prev-month {}
-    .next-month { }
-    .current-month {}
-  
-    .has-events {}
+  .prev-month {
+    background-color: #aaa;
+  }
+  .next-month { 
+    background-color: #aaa;
+  }
+  .current-month {}
+
+  .has-events {
+    background-color: #cbffd3;
+  }
+  .today {
+    background-color: #ffffc0;
   }
 }
