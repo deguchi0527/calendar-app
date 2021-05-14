@@ -6,6 +6,7 @@
 
       <%= form_with model: @memo, local: true do |f| %>
         <h2 class="new-heading">スケジュルーの登録</h2>
+        
         <div class="form title">
           <%= f.label :title do %>
             タイトル
@@ -27,6 +28,13 @@
             内容
           <% end %>
           <%= f.text_field :content %>
+        </div>
+
+        <div class="form image" id="image-list">
+            <label class="form-image">
+              <span class="image-file"><%= icon('far', 'image', class: "fa-3x") %></span>
+              <%= f.file_field :image, class: "hidden", id: "tweet-image" %>
+            </label>
         </div>
 
         <div class="form submit">

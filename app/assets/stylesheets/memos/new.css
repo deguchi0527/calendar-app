@@ -1,11 +1,17 @@
 .container-fluid {
   height: 100vh;
+  background-color: #ffffdd;
+}
+
+.row {
+  padding: 5vh 0 0;
+  background-color: inherit;
 }
 
 .new-event {
   margin: 0 auto;
-  background-color: #ffffdd;
   margin-top: 5vh;
+  background-color: #fff;
 }
 
 .new-heading {
@@ -23,6 +29,26 @@
 
 .form>label {
   padding: 2vh 0;
+}
+
+.fa-image {
+  color: #aaa;
+}
+
+.fa-image:hover:after {
+  content: "画像";
+  font-size: 13px;
+  text-align: center;
+  padding: 4px;
+  color: #fff;
+  background-color: #777;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
 }
 
 .submit {

@@ -16,11 +16,19 @@ a:hover {
 li {
   list-style: none;
 }
-
 /* /共通 */
+
 .user-info {
   padding: 3vh 5vh 2vh;
+  display: flex;
+  align-items: center;
 }
+
+.user-profile {
+  margin-left: 3vh;
+  display: none;
+}
+
 .new-memo {
   display: flex;
   align-items: center;
@@ -39,10 +47,44 @@ li {
   width: 80%;
 }
 
+.lists>thead>tr>th {
+  text-align: left;
+}
+
 .memo-title {
   width: 40%;
 }
 
 .memo-time {
   width: 40%;
+}
+
+.day-events-title {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+}
+
+/* スマホ表示時 */
+@media (max-width: 576px) {
+  .user-info {
+    padding: 3vh 2vh;
+  }
+  .new-memo {
+    padding: 3vh 2vh;
+  }
+  .new-memo-btn {
+    padding: 6px;
+    margin-left: 2vh;
+  }
+  
+  .lists {
+    width: 100%;
+    margin: 0 0 1vh;
+  }
+  .memo-btn {
+    display: none;
+  }
 }

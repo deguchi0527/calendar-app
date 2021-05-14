@@ -1,8 +1,13 @@
 class MemosController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :set_memo, only: [:show, :edit, :update, :destroy]
   
   def index
-    @memos = Memo.all
+    if user_signed_in?
+      @memos = current_user.memos
+    else
+      @memos = []
+    end
   end
 
   def new
@@ -40,7 +45,7 @@ class MemosController < ApplicationController
   private
 
   def memo_params
-    params.require(:memo).permit(:title, :content, :start_time)
+    params.require(:memo).permit(:title, :content, :start_time, :image).merge(user_id: current_user.id)
   end
 
   def set_memo
