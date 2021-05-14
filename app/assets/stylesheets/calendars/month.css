@@ -23,6 +23,23 @@
   margin-left: 1vh;
 }
 
+.calendar-tabel {
+  table-layout: fixed;
+}
+
 .table-striped thead tr th {
   text-align: center;
+}
+
+/* スマホ表示時 */
+@media (max-width: 576px) {
+  .calendar-heading {
+    text-align: center;
+  }
+  .calendar-heading a {
+    margin: 0 1vh;
+  }
+  .calendar-title {
+    font-size: 24px;
+  }
 }
