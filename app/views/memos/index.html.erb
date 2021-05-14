@@ -1,13 +1,16 @@
 <%= render "shared/header" %>
 
 <div class="user-info">
-  <% if user_signed_in? %>
-    <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
-    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-  <% else %>
-    <li><%= link_to 'ログイン',  new_user_session_path, class: "login" %></li>
-    <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-  <% end %>
+  <%= icon('far', 'user', class: "fa-2x", id: "user-icon") %>
+  <div class="user-profile">
+    <% if user_signed_in? %>
+      <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+    <% else %>
+      <li><%= link_to 'ログイン',  new_user_session_path, class: "login" %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+    <% end %>
+  </div>
 </div>
 
 <div class="new-memo">

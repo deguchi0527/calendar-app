@@ -20,7 +20,15 @@ li {
 
 .user-info {
   padding: 3vh 5vh 2vh;
+  display: flex;
+  align-items: center;
 }
+
+.user-profile {
+  margin-left: 3vh;
+  display: none;
+}
+
 .new-memo {
   display: flex;
   align-items: center;
