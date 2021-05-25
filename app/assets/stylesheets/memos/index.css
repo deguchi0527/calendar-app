@@ -67,6 +67,19 @@ li {
   font-size: 14px;
 }
 
+.event-list {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.event-list-info {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* スマホ表示時 */
 @media (max-width: 576px) {
   .user-info {

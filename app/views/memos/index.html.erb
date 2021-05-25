@@ -43,7 +43,7 @@
 <br><br>
 
 <%= month_calendar events: @memos do |date, memos| %>
-  <%= date.day %>
+  <span class="calendar-day"><%= date.day %></span>
 
   <% memos.each do |memo| %>
     <div class="day-events-title">
@@ -51,4 +51,15 @@
     </div>
   <% end %>
 <% end %>
+
+<div class="event-lists col-12 d-md-none">
+  <% @memos.each do |memo| %>
+    <div class="event-list <%= memo.start_time.strftime("%Y-%m-%d") %>">
+      <div class="event-list-info">
+        <p><%= memo.title%></p>
+        <p><%= memo.start_time.strftime("%H:%M") %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
 
