@@ -5,14 +5,24 @@
   background-color: #fff;
 }
 
+.image-content {
+  padding-bottom: 20px;
+}
+
 .image-show {
-  width: 60%;
+  width: 70%;
+  height: 370px;
   display: block;
   margin: 0 auto;
 }
 
+.show-contents {
+  width: 70%;
+  margin: 0 auto;
+}
+
 .show-contents>p {
-  padding-left: 5vh;
+  margin-left: -3vh;
   display: flex;
   flex-direction: column;
 }
@@ -45,13 +55,17 @@
 @media (max-width: 768px){
   .image-show {
     width: 80%;
+    height: 320px;
   }
 }
 
 /* スマホ表示時 */
 @media (max-width: 576px) {
   .image-show {
-    width: 80%;
+    height: 230px;
+  }
+  .show-contents {
+    width: 92%;
   }
   .show-contents>p {
     padding-left: 2vh;
