@@ -84,6 +84,11 @@ li {
   justify-content: space-between;
 }
 
+.event-none {
+  padding-top: 30px;
+  text-align: center;
+}
+
 /* スマホ表示時 */
 @media (max-width: 576px) {
   .user-info {
