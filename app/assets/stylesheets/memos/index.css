@@ -76,6 +76,10 @@ li {
 }
 
 .event-list-info {
+  border-bottom: 1px solid #eee;
+  padding: 0.5em;
+  color: #494949;
+  border-left: solid 4px #ffaf58;
   display: flex;
   justify-content: space-between;
 }
@@ -92,12 +96,14 @@ li {
     padding: 6px;
     margin-left: 2vh;
   }
-  
   .lists {
     width: 100%;
     margin: 0 0 1vh;
   }
   .memo-btn {
+    display: none;
+  }
+  .day-events {
     display: none;
   }
 }

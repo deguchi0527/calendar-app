@@ -47,16 +47,17 @@
 
   <% memos.each do |memo| %>
     <div class="day-events-title">
-      <%=link_to memo.title, memo_path(memo.id) %>
+      <span class="day-events"><%=link_to memo.title, memo_path(memo.id) %></span>
     </div>
   <% end %>
 <% end %>
 
 <div class="event-lists col-12 d-md-none">
+  <h3 class="event-lists-day"></h3>
   <% @memos.each do |memo| %>
     <div class="event-list <%= memo.start_time.strftime("%Y-%m-%d") %>">
       <div class="event-list-info">
-        <p><%= memo.title%></p>
+        <p><%=link_to memo.title, memo_path(memo.id) %></p>
         <p><%= memo.start_time.strftime("%H:%M") %></p>
       </div>
     </div>
